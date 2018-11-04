@@ -1,5 +1,3 @@
-Coveralls.wear!
-
 
 import unittest
 
