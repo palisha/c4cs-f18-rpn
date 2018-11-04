@@ -2,6 +2,7 @@
 
 import operator
 import readline
+
 from termcolor import colored
 
 operators = {
@@ -19,14 +20,12 @@ def calculate(myarg):
         try:
             token = int(token)
             stack.append(token)
-            print colored(stack,'green')
         except ValueError:
             function = operators[token]
             arg2 = stack.pop()
             arg1 = stack.pop()
             result = function(arg1, arg2)
-            stack.append(result) 
-	    print colored(stack,'purple')
+            stack.append(result)
     if len(stack) != 1:
         raise TypeError("Too many parameters")
     return stack.pop()
