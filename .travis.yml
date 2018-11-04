@@ -1,5 +1,5 @@
 language: python
 python:
         "3.5"
-script: python3 -m unittest 
+script: coverage run -m unittest 
 after_success: coveralls
