@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
 import operator
-
+import readline
+from termcolor import colored
 
 operators = {
     '+': operator.add,
@@ -18,13 +19,14 @@ def calculate(myarg):
         try:
             token = int(token)
             stack.append(token)
+            print colored(stack,'green')
         except ValueError:
             function = operators[token]
             arg2 = stack.pop()
             arg1 = stack.pop()
             result = function(arg1, arg2)
-            stack.append(result)
-        print(stack)
+            stack.append(result) 
+	    print colored(stack,'purple')
     if len(stack) != 1:
         raise TypeError("Too many parameters")
     return stack.pop()
