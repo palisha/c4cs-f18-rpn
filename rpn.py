@@ -3,7 +3,7 @@
 import operator
 import readline
 #import colors
-from termcolor import colored
+#from termcolor import colored
 operators = {
     '+': operator.add,
     '-': operator.sub,
