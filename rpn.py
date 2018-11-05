@@ -19,12 +19,12 @@ def calculate(myarg):
         try:
             token = int(token)
             stack.append(token)
-           # print (colored(stack,'green'))
+            #print (colored(stack,'green'))
         except ValueError:
             function = operators[token]
-            if(token == '<'):
-                print(token)
-         #   print(colored(token,'green'))
+           # if(token == '<'):
+            #    print(token)
+            #print(colored(token,'green'))
             arg2 = stack.pop()
             arg1 = stack.pop()
             result = function(arg1, arg2)
