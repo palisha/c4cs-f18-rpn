@@ -22,8 +22,8 @@ def calculate(myarg):
             #print (colored(stack,'green'))
         except ValueError:
             function = operators[token]
-            if(token == '<'):
-                print(token)
+            #if(token == '<'):
+            print(token)
             #print(colored(token,'green'))
             arg2 = stack.pop()
             arg1 = stack.pop()
